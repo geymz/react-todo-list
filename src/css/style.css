@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Briem Hand", cursive;
+}
+
+body {
+  height: 100vh;
+  background-color: #383a3f;
+  position: relative;
+}
+body .total {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 100px;
+  background-color: #202124;
+  width: 40%;
+  border-radius: 50px;
+  box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.35);
+}
+body .total h1 {
+  display: flex;
+  letter-spacing: 1px;
+  margin-bottom: 70px;
+  color: #fff;
+  float: none;
+}
+body .total .inputAll {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+body .total .inputAll .inputs {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+body .total .inputAll .inputs #date {
+  padding: 10px 20px;
+  border: #202124;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #202124;
+  outline: none;
+  letter-spacing: 1px;
+  width: 70%;
+}
+body .total .inputAll .inputs #btn {
+  padding: 10px 20px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #383a3f;
+  color: #fff;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+body .total .inputAll #text {
+  padding: 15px 20px;
+  border: #202124;
+  border-radius: 10px;
+  font-size: 18px;
+  color: #202124;
+  outline: none;
+  letter-spacing: 1px;
+  width: 100%;
+}
+body .total .listArea .lists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 50px;
+  justify-content: center;
+}
+body .total .listArea .lists .list {
+  background-color: #383a3f;
+  list-style-type: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  filter: drop-shadow(0 0 3px rgb(122, 122, 122));
+  border-radius: 15px;
+  cursor: pointer;
+  width: 100px;
+}
+body .total .listArea .lists .list:hover {
+  background-color: #202100;
+}
+body .detailBox .detailBoxUl .detailBoxLi {
+  list-style-type: none;
+  visibility: hidden;
+  display: none;
+}
+body .detailBox .detailBoxUl .openPage {
+  display: flex;
+  visibility: visible;
+  flex-direction: column;
+  padding: 45px 10px;
+  background-color: #202124;
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  position: absolute;
+  top: 300px;
+  right: 100px;
+  z-index: 200;
+}
+body .detailBox .detailBoxUl .openPage .list-all {
+  display: flex;
+  justify-content: space-between;
+}
+body .detailBox .detailBoxUl .openPage .list-all .list {
+  white-space: pre-wrap;
+}
+body .detailBox .detailBoxUl .openPage .list-all .list .text-info {
+  color: grey;
+}
+body .detailBox .detailBoxUl .openPage .list-all .deleteItem {
+  color: red;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+@media (max-width: 861px) {
+  body {
+    position: relative;
+  }
+  body .total {
+    padding: 100px 150px;
+  }
+  body .total h1 {
+    letter-spacing: 1px;
+    margin-bottom: 70px;
+    color: #fff;
+  }
+  body .total .listArea .lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 30px;
+  }
+  body .detailBox .detailBoxUl .detailBoxLi {
+    background-color: rgba(32, 33, 36, 0.9);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease;
+    list-style-type: none;
+    display: none;
+    visibility: hidden;
+  }
+  body .detailBox .detailBoxUl .detailBoxLi .text-info {
+    color: grey;
+  }
+  body .detailBox .detailBoxUl .openPage {
+    display: flex;
+    visibility: visible;
+    filter: drop-shadow(0 0 5px rgb(152, 152, 152));
+    z-index: 200;
+  }
+  body .detailBox .openPage {
+    position: relative;
+  }
+  body .detailBox .openPage::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  body .detailBox .active-overlay .overlay {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
