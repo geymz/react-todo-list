@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Briem+Hand:wght@100..900&display=swap');
+
+//componentlerin içerisindeki scss dosyalarını style.scss dosyasına enjekte ediyoruz 
+@import '../components/taskDetail/styles.module.scss';
+@import '../components/taskInput/styles.module.scss';
+@import '../components/taskList/styles.module.scss';
+
+// kullanılmıyor
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+//   font-family: "Briem Hand", cursive;
+// }
+
+// body {
+//   height: 100vh;
+//   background-color: #383a3f;
+//   position: relative;
+
+
+//   .total {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     padding: 100px;
+//     background-color: #202124;
+//     width: 40%;
+//     border-radius: 50px;
+//     //filter: drop-shadow(0 0 5px rgb(152, 152, 152));
+//     box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.35);
+
+//     h1 {
+//       display: flex;
+//       letter-spacing: 1px;
+//       margin-bottom: 70px;
+//       color: #fff;
+//       float: none;
+//     }
+
+//     .inputAll {
+//       display: flex;
+//       flex-direction: column;
+//       gap: 10px;
+//       margin-bottom: 50px;
+
+//       .inputs {
+//         display: flex;
+//         flex-direction: row;
+//         gap: 30px;
+//         #date {
+//           padding: 10px 20px;
+//           border: #202124;
+//           border-radius: 10px;
+//           font-size: 18px;
+//           color: #202124;
+//           outline: none;
+//           letter-spacing: 1px;
+//           width: 70%;
+//         }
+//         #btn {
+//           padding: 10px 20px;
+//           font-size: 14px;
+//           letter-spacing: 1px;
+//           font-weight: 500;
+//           cursor: pointer;
+//           border-radius: 10px;
+//           background-color: #383a3f;
+//           color: #fff;
+//           border: none;
+//           display: flex;
+//           justify-content: center;
+//           align-items: center;
+//           width: 30%;
+//         }
+//       }
+
+//       #text {
+//         padding: 15px 20px;
+//         border: #202124;
+//         border-radius: 10px;
+//         font-size: 18px;
+//         color: #202124;
+//         outline: none;
+//         letter-spacing: 1px;
+//         width: 100%;
+//       }
+//     }
+
+
+//     .listArea {
+//       .lists {
+//         display: grid;
+//         grid-template-columns: 1fr 1fr 1fr 1fr;
+//         gap: 50px;
+//         justify-content: center;
+
+//         .list {
+//           background-color: #383a3f;
+//           list-style-type: none;
+//           padding: 10px 20px;
+//           font-size: 18px;
+//           font-weight: 700;
+//           filter: drop-shadow(0 0 3px rgb(122, 122, 122));
+//           border-radius: 15px;
+//           cursor: pointer;
+//           width: 100px;
+
+//           &:hover {
+//             background-color:  #202100;
+//           }
+//         }
+//       }
+//     }
+//   }
+
+//   .detailBox {
+//     .detailBoxUl {
+//       .detailBoxLi {
+//         list-style-type: none;
+//         visibility: hidden;
+//         display: none;
+//       }
+
+//       .openPage{
+//         display: flex;
+//         visibility: visible;
+
+//         flex-direction: column;
+//         padding: 45px 10px;
+//         background-color: #202124;
+//         width: 200px;
+//         height: auto;
+//         border-radius: 20px;
+//         box-shadow: 0px 0px 7px 4px rgba(0,0,0,0.15);
+//         text-align: left;
+//         position: absolute;
+//         top: 300px;
+//         right: 100px;
+//         z-index: 200;
+
+//         .list-all {
+//           display: flex;
+//           justify-content: space-between;
+
+//           .list {
+//             white-space: pre-wrap;
+//             .text-info {
+//               color: grey;
+//             }
+//           }
+
+//           .deleteItem {
+//             color: red;
+//             cursor: pointer;
+//             font-size: 20px;
+//             font-weight: 700;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media (max-width: 861px) {
+//   body {
+//     position: relative;
+
+//     //.modalBackground {
+//     //  position: fixed;
+//     //  top: 0;
+//     //  left: 0;
+//     //  width: 100%;
+//     //  height: 100%;
+//     //  background-color: rgba(0, 0, 0, 0.5);
+//     //  z-index: 100;
+//     //}
+
+//     .total {
+//       //margin: 120px auto;
+//       padding: 100px 150px;
+
+//       h1 {
+//         letter-spacing: 1px;
+//         margin-bottom: 70px;
+//         color: #fff;
+//       }
+
+//       .listArea {
+//         .lists {
+//           display: grid;
+//           grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+//           gap: 30px;
+//         }
+//       }
+//     }
+
+//     .detailBox {
+//       .detailBoxUl {
+//         .detailBoxLi {
+//           background-color: rgba(32, 33, 36, 0.9);
+//           padding: 20px;
+//           border-radius: 20px;
+//           box-shadow: 0px 0px 7px 4px rgba(0, 0, 0, 0.15);
+//           transition: background-color 0.3s ease;
+//           list-style-type: none;
+//           display: none;
+//           visibility: hidden;
+
+//           .text-info {
+//             color: grey;
+//           }
+//         }
+
+//         .openPage {
+//           display: flex;
+//           visibility: visible;
+//           filter: drop-shadow(0 0 5px rgb(152, 152, 152));
+//           z-index: 200;
+//         }
+//       }
+
+//       .openPage {
+//         position: relative;
+
+//         &::before {
+//           content: '';
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           width: 100%;
+//           height: 100%;
+//           z-index: -1;
+//         }
+//       }
+
+//       .active-overlay {
+//         .overlay {
+//           display: block;
+//         }
+//       }
+//     }
+//   }
+// }
